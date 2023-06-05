@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lag311.pa.AddPartController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="lblAddPartTitle" text="Add Part">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radioAddPartInHouse" mnemonicParsing="false" onAction="#onClickInHouse" selected="true" text="In-House">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="inHouse" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioAddPartOutsourced" mnemonicParsing="false" onAction="#onClickOutsourced" text="Outsourced " toggleGroup="$inHouse">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblAddPartID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="95.0" text="ID" />
+                  <TextField fx:id="txtAddPartID" editable="false" focusTraversable="false" promptText="auto-gen ID" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="125.0" prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblAddPartName" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="95.0" text="Name" />
+                  <TextField fx:id="txtAddPartName" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="181.0" prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblAddPartInv" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="94.0" text="Inv">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Label>
+                  <TextField fx:id="txtAddPartInv" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="237.0" prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblAddPartPrice" minWidth="-Infinity" prefHeight="17.0" prefWidth="93.0" text="Price/Cost">
+                     <opaqueInsets>
+                        <Insets right="5.0" />
+                     </opaqueInsets></Label>
+                  <TextField fx:id="txtAddPartPrice" prefHeight="25.0" prefWidth="149.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="231.0" prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblAddPartMax" minWidth="-Infinity" prefHeight="18.0" prefWidth="94.0" text="Max" />
+                  <TextField fx:id="txtAddPartMax" />
+                  <Label fx:id="lblAddPartMin" prefHeight="18.0" prefWidth="53.0" text="Min">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtAddPartMin" layoutX="76.0" layoutY="10.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="231.0" prefHeight="54.0" prefWidth="565.0">
+               <children>
+                  <Label fx:id="lblAddPartMachine_or_CoName" contentDisplay="RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="95.0" text="Machine ID" wrapText="true" />
+                  <TextField fx:id="txtAddPartMachine_or_CoName" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="125.0" prefWidth="600.0">
+               <children>
+                  <HBox prefHeight="119.0" prefWidth="224.0">
+                     <HBox.margin>
+                        <Insets right="120.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="exceptionErrorText" alignment="TOP_LEFT" prefHeight="110.0" prefWidth="225.0" wrapText="true" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnAddPartSave" mnemonicParsing="false" onAction="#onActionSavePart" prefHeight="25.0" prefWidth="49.0" text="Save" />
+                        <Button fx:id="btnAddPartCancel" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onActionCancelPart" text="Cancel">
+                           <HBox.margin>
+                              <Insets left="80.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

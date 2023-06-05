@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lag311.pa.ModifyPartController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <Label text="Modify Part">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radioModifyPart_InHouse" mnemonicParsing="false" onAction="#onClick_InHouse_ModifyPart" selected="true" text="In-House">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="modifyPart_Toggle" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioModifyPart_OutSourced" mnemonicParsing="false" onAction="#onClick_Outsource_ModifyPart" text="Out Sourced" toggleGroup="$modifyPart_Toggle">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblModifyPart_ID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="86.0" text="ID" />
+                  <TextField fx:id="txt_ModifyPart_ID" editable="false" focusTraversable="false" opacity="0.5" promptText="Auto-generated" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="125.0" prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblModifyPart_Name" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="88.0" text="Name" />
+                  <TextField fx:id="txt_ModifyPart_Name" text="" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="181.0" prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblModifyPart_Inv" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="89.0" text="Inv" />
+                  <TextField fx:id="txt_ModifyPart_Inv" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="237.0" prefHeight="35.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="lblModifyPart_PriceCost" minWidth="-Infinity" prefHeight="18.0" prefWidth="89.0" text="Price/Cost" />
+                  <TextField fx:id="txt_ModifyPart_PriceCost" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="231.0" prefHeight="35.0" prefWidth="567.0">
+               <children>
+                  <Label fx:id="lblModifyPart_Max" minWidth="-Infinity" prefHeight="18.0" prefWidth="89.0" text="Max">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding></Label>
+                  <TextField fx:id="txt_ModifyPart_Max" />
+                  <Label fx:id="lblModifyPart_Min" prefHeight="18.0" prefWidth="46.0" text="Min">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txt_ModifyPart_Min" layoutX="10.0" layoutY="10.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="231.0" prefHeight="34.0" prefWidth="568.0">
+               <children>
+                  <Label fx:id="lblModifyPart_Machine_Company" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="90.0" text="Machine ID">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+                  <TextField fx:id="txt_ModifyPart_MachineID_CompName" prefHeight="26.0" prefWidth="151.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="116.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="exceptionErrorTextModPart" alignment="TOP_LEFT" prefHeight="128.0" prefWidth="281.0" wrapText="true" />
+                  <Button fx:id="btn_ModifyPart_Save" mnemonicParsing="false" onAction="#onAction_Save_ModifyPart" text="Save">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="btn_ModifyPart_Cancel" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onAction_Cancel_ModifyPart" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="70.0" right="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
